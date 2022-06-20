@@ -14,12 +14,15 @@ with source_data as (
     select 1 as id
     union all
     select null as id
+    union all 
+    select 3 as id
 
 )
 
-select *, {{ var('my_first_variable') }} as first_variable
+select *
 from source_data
-where id >= {{ var('my_third_variable') }} 
+where id is not null
+
 
 /*
     Uncomment the line below to remove records with null `id` values
