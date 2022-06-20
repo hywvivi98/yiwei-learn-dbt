@@ -9,7 +9,7 @@ models:
         description: "The primary key for this table"
         tests:
           - unique
-          - not_null
+
 
 
   - name: my_second_dbt_model
@@ -19,11 +19,6 @@ models:
         description: "The primary key for this table"
         tests:
           - unique
-          - not_null
-          - relationships:
-              to: ref('my_first_dbt_model') 
-              field: id
-            # the id in the second model need to reference to the id in the first model
 
 
   - name: snowflake_customer_purchase
