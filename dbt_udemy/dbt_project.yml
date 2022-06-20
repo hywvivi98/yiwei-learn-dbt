@@ -35,4 +35,8 @@ models:
   dbt_udemy:
     # Config indicated by + and applies to all files under models/example/
     example:
-      +materialized: view
+      +materialized: table
+      +vars:
+        my_first_variable: True
+        my_second_variable: 2020
+        my_third_variable: 2

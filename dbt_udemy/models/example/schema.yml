@@ -32,3 +32,4 @@ models:
 
   - name: cumulative_orders_by_date
   - name: dates
+  - name: incremental_time
